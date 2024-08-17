@@ -1,42 +1,56 @@
 {
-    "login": {
-        "id": 1,
-        "userName": "Sam"
+  "login": {
+    "id": 1,
+    "userName": "Sam"
+  },
+  "studentsRecords": [
+    {
+      "name": "Person 1",
+      "id": 1,
+      "country": "India",
+      "date": "20 Dec 2010",
+      "passportDeclaration": "Yes",
+      "fitnessDeclaration": "Yes",
+      "courseName": "BSc",
+      "subject": "Maths",
+      "street": "Delhi",
+      "address2": "Delhi",
+      "city": "Delhi",
+      "email": "u1fzV@example.com",
+      "postalCode": "111111",
+      "state": "Delhi"
     },
-    "studentsRecords": [
-        {
-            "name": "Person 1",
-            "id": 1,
-            "phone": "123123123",
-            "country": "India",
-            "date": "20 Dec 2010",
-            "passportDeclaration": "Yes",
-            "fitnessDeclaration": "Yes",
-            "courseName": "BSc",
-            "subject": "Maths",
-            "street": "Delhi",
-            "address2": "Delhi",
-            "city": "Delhi",
-            "email": "u1fzV@example.com",
-            "postalCode": "111111",
-            "state": "Delhi"
-        },
-        {
-            "name": "Person 2",
-            "id": 2,
-            "phone": "894984984",
-            "country": "India",
-            "date": "21 Jan 2090",
-            "passportDeclaration": "Yes",
-            "fitnessDeclaration": "Yes",
-            "courseName": "BTech",
-            "subject": "Science",
-            "street": "Bangalore",
-            "address2": "Bangalore",
-            "city": "Bangalore",
-            "email": "zVttrt@example.com",
-            "postalCode": "560012",
-            "state": "Bangalore"
-        }
-    ]
+    {
+      "name": "Person 2",
+      "id": 2,
+      "country": "India",
+      "date": "21 Jan 2090",
+      "passportDeclaration": "Yes",
+      "fitnessDeclaration": "Yes",
+      "courseName": "BTech",
+      "subject": "Science",
+      "street": "Bangalore",
+      "address2": "Bangalore",
+      "city": "Bangalore",
+      "email": "zVttrt@example.com",
+      "postalCode": "560012",
+      "state": "Bangalore"
+    },
+    {
+      "name": "Robert",
+      "country": "India",
+      "state": "Tamil Nadu",
+      "passportDeclaration": "Yep",
+      "fitnessDeclaration": "Yep",
+      "courseName": "Yoga",
+      "subject": "Asanas",
+      "date": "2000-07-31T18:30:00.000Z",
+      "city": "Vellore",
+      "street": "K-313 Men's Hostel",
+      "address2": "VIT University",
+      "email": "rob@gmail.com",
+      "postalCode": "632088",
+      "id": 3
+    }
+  ]
 }

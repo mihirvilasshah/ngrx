@@ -23,7 +23,7 @@ export class StudentsTableComponent implements OnInit {
     dataSource: any = [];
     studentsControl: FormControl = new FormControl();
     dataSource$: Observable<StudentsRecords[]> = this.store.select(selectAllStudents);
-    displayColumns: string[] = ['name', 'city', 'country', 'subject', 'passportDeclaration', 'fitnessDeclaration', 'courseName', 'date', 'state', 'street', 'email', 'phone', 'postalCode'];
+    displayColumns: string[] = ['name', 'city', 'country', 'subject', 'passportDeclaration', 'fitnessDeclaration', 'courseName', 'date', 'state', 'street', 'email', 'postalCode'];
     constructor(private store: Store<AppState>) {
         this.store.dispatch(Actions.callStudentsRecordsApi());
     }

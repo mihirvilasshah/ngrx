@@ -6,7 +6,9 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatTab, MatTabsModule } from '@angular/material/tabs';
+import { Store } from '@ngrx/store';
+import { AppState } from '../state/students-selectors';
+import { addStudentsRecordsApi } from '../state/students-records.action';
 
 @Component({
 	selector: 'app-student-records',
@@ -16,7 +18,6 @@ import { MatTab, MatTabsModule } from '@angular/material/tabs';
 		ReactiveFormsModule,
 		FormsModule,
 		MatCardModule,
-		MatTabsModule,
 		MatDatepickerModule,
 		MatInputModule,
 		MatFormFieldModule,
@@ -54,8 +55,8 @@ export class StudentRecordsComponent {
 		return this.studentDetailsForm.get("courseName") as FormControl;
 	}
 
-	get subjectsControl(): FormControl {
-		return this.studentDetailsForm.get("subjects") as FormControl;
+	get subjectControl(): FormControl {
+		return this.studentDetailsForm.get("subject") as FormControl;
 	}
 
 	get dateControl(): FormControl {
@@ -78,12 +79,13 @@ export class StudentRecordsComponent {
 		return this.studentDetailsForm.get("email") as FormControl;
 	}
 
-	get zipControl(): FormControl {
-		return this.studentDetailsForm.get("zip") as FormControl;
+	get postalCodeControl(): FormControl {
+		return this.studentDetailsForm.get("postalCode") as FormControl;
 	}
 
 	constructor(
-		private fb: FormBuilder
+		private fb: FormBuilder,
+		private store: Store<AppState>
 	) {
 		this.studentDetailsForm = this.fb.group({
 			name: this.fb.control("", [Validators.required]),
@@ -92,19 +94,18 @@ export class StudentRecordsComponent {
 			passportDeclaration: this.fb.control("", [Validators.required]),
 			fitnessDeclaration: this.fb.control("", [Validators.required]),
 			courseName: this.fb.control("", [Validators.required]),
-			subjects: this.fb.control("", [Validators.required]),
+			subject: this.fb.control("", [Validators.required]),
 			date: this.fb.control("", [Validators.required]),
 			city: this.fb.control("", [Validators.required]),
 			street: this.fb.control("", [Validators.required]),
 			address2: this.fb.control("", [Validators.required]),
 			email: this.fb.control("", [Validators.required]),
-			zip: this.fb.control("", [Validators.required])
+			postalCode: this.fb.control("", [Validators.required])
 		});
 	}
 
 	addStudentRecord() {
-		// TODO: Add Student Record
-		// dispatch action to add student record
+		this.store.dispatch(addStudentsRecordsApi({ payload: this.studentDetailsForm.value }));
 		this.studentDetailsForm.reset();
 	}
 }

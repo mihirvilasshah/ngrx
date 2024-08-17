@@ -12,5 +12,16 @@ export const studentsReducer = createReducer(
         (state: any, { payload }: any) => {
             return adapter.addMany(payload, state);
         }
+    ),
+    on(Actions.addStudentsRecordsApiSuccess, 
+        (state: any, { payload }: any) => {
+            return adapter.addOne(payload, { ...state, error: null });
+        }
+    ),
+    on(Actions.addStudentsRecordsApiFailure, 
+        (state: any, { error }: any) => {
+            console.error(Actions.actionsList.addStudentsRecordsApiFailure, error);
+            return { ...state, error };
+        }
     )
 );

@@ -44,8 +44,8 @@
                         <input matInput type="text" name="courseName" [formControl]="courseNameControl" type="text" placeholder="Course Name">
                     </mat-form-field>
                     <mat-form-field class="form-group">
-                        <mat-label>Subjects</mat-label>
-                        <input matInput type="text" name="subjects" [formControl]="subjectsControl" type="text" placeholder="Subject">
+                        <mat-label>Subject</mat-label>
+                        <input matInput type="text" name="subjects" [formControl]="subjectControl" type="text" placeholder="Subject">
                     </mat-form-field>
                 </div>
             </div>
@@ -90,7 +90,7 @@
                 <div class="student-entry-form__form-row--input-section">
                     <mat-form-field class="form-group">
                         <label>Postal Code</label>
-                        <input matInput [formControl]="zipControl" placeholder="Postal code"/>
+                        <input matInput [formControl]="postalCodeControl" placeholder="Postal code"/>
                     </mat-form-field>
                     <mat-form-field class="form-group">
                         <label>Country</label>
