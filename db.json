@@ -5,10 +5,10 @@
   },
   "studentsRecords": [
     {
-      "name": "Person 1",
+      "name": "Rocky",
       "id": 1,
       "country": "India",
-      "date": "20 Dec 2010",
+      "date": "2010-12-20T18:30:00.000Z",
       "passportDeclaration": "Yes",
       "fitnessDeclaration": "Yes",
       "courseName": "BSc",
@@ -16,15 +16,15 @@
       "street": "Delhi",
       "address2": "Delhi",
       "city": "Delhi",
-      "email": "u1fzV@example.com",
+      "email": "rocky@example.com",
       "postalCode": "111111",
       "state": "Delhi"
     },
     {
-      "name": "Person 2",
+      "name": "Johnny",
       "id": 2,
       "country": "India",
-      "date": "21 Jan 2090",
+      "date": "2019-01-20T18:30:00.000Z",
       "passportDeclaration": "Yes",
       "fitnessDeclaration": "Yes",
       "courseName": "BTech",
@@ -32,7 +32,7 @@
       "street": "Bangalore",
       "address2": "Bangalore",
       "city": "Bangalore",
-      "email": "zVttrt@example.com",
+      "email": "johny@example.com",
       "postalCode": "560012",
       "state": "Bangalore"
     },
@@ -51,6 +51,22 @@
       "email": "rob@gmail.com",
       "postalCode": "632088",
       "id": 3
+    },
+    {
+      "name": "Sam",
+      "country": "India",
+      "state": "Tamil Nadu",
+      "passportDeclaration": "Yep",
+      "fitnessDeclaration": "Yep",
+      "courseName": "CS",
+      "subject": "AI",
+      "date": "2017-02-06T18:30:00.000Z",
+      "city": "Vellore",
+      "street": "K-313 Men's Hostel",
+      "address2": "VIT University",
+      "email": "sam@gmail.com",
+      "postalCode": "632014",
+      "id": 4
     }
   ]
 }
